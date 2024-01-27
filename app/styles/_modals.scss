@@ -1,0 +1,45 @@
+.ReactModal__Content {
+  border-radius: 37px !important;
+  background: #141414 !important;
+  box-shadow: 0px 7px 29.7px -10px rgba(255, 255, 255, 0.25) !important;
+  border: none !important;
+  padding: 45px !important;
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin-right: -50% !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 95%;
+}
+
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.29) !important;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .ReactModal__Content {
+    padding: 25px !important;
+  }
+}

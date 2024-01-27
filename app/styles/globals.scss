@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Moulpali&family=New+Rocker&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "modals";
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100svh;
+  //background: linear-gradient(180deg, #000 47.5%, #0B0010 100%);
+  z-index: 2;
+  position: relative;
+}
+
+.b {
+  font-weight: bold;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d;
+  border-radius: 20px;
+}
