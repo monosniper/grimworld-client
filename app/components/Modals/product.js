@@ -10,7 +10,7 @@ import {API_URL, SERVER_URL} from "@/api";
 
 const ProductModal = ({ handleClose, isOpen }) => {
     const { modalsStore } = useRootStore();
-    const {name, description, price, Media: {name: image_name}} = modalsStore.current_product ?? {Media: {}}
+    const {name, description, price_1: price, Media: {name: image_name}} = modalsStore.current_product ?? {Media: {}}
 
     return (
         <Modal closeTimeoutMS={500} ariaHideApp={false} isOpen={isOpen}>

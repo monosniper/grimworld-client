@@ -1,9 +1,9 @@
 {
   "/_not-found": "app/_not-found.js",
   "/bans/page": "app/bans/page.js",
-  "/crafts/page": "app/crafts/page.js",
-  "/page": "app/page.js",
-  "/policy/page": "app/policy/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/crafts/page": "app/crafts/page.js",
+  "/policy/page": "app/policy/page.js",
+  "/page": "app/page.js",
   "/rules/page": "app/rules/page.js"
 }
