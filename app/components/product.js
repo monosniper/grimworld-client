@@ -29,7 +29,7 @@ const Product = ({ data }) => {
                 onClick={handleOpen}
                  className={styles.item__title}>{data.name}</div>
             <div className={styles.item__footer}>
-                <div className={styles.item__price}>{data.price}₽</div>
+                <div className={styles.item__price}>{data.price_1}₽</div>
                 <button className={componentStyles.button} onClick={handleClick}>
                     <Image
                         src="/images/basket_black.svg"
