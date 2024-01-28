@@ -24,12 +24,7 @@ const ProductModal = ({ handleClose, isOpen }) => {
                     />
                 </button>
                 <div className={styles.image}>
-                    <Image
-                        src={SERVER_URL + 'uploads/' + image_name}
-                        width={300}
-                        height={300}
-                        alt={name}
-                    />
+                    <img src={SERVER_URL + 'uploads/' + image_name}width={300} height={300}  alt={name}/>
                 </div>
                 <div className={styles.title}>{name}</div>
                 <div className={styles.text}>{description}</div>
