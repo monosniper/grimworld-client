@@ -28,7 +28,7 @@ const Page = () => {
                         <div className={styles.banner__item}>IP: {dataStore.settings.ip2}</div>
                         <div className={styles.banner__item}>
                             <span className={styles.banner__online}></span>
-                            24/100
+                            {dataStore.online ? (dataStore.online.online + '/' + dataStore.online.max) : '0/0'}
                         </div>
                     </div>
                     <div className={styles.banner__scroll}>

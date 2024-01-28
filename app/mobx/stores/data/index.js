@@ -5,6 +5,7 @@ export class DataStore {
     products = [];
     categories = [];
     crafts = [];
+    online = false;
     settings = {
         telegram: '',
         tiktok: '',
@@ -38,6 +39,12 @@ export class DataStore {
     fetchCrafts() {
         $api("crafts").then(({ data: {data} }) => {
             this.crafts = data
+        })
+    }
+
+    fetchOnline() {
+        $api("online").then(({ data: {data} }) => {
+            this.online = data
         })
     }
 
