@@ -14,7 +14,7 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={'container ' + styles.footer__wrapper}>
                 <div className={styles.footer__socials}>
-                    <Link passHref={true} href={dataStore.settings.telegram}>
+                    <Link passHref={true} href={dataStore.settings.telegram || '#'}>
                         <Image
                             src="/images/telegram.svg"
                             width={25}
@@ -22,7 +22,7 @@ const Footer = () => {
                             alt="Telegram"
                         />
                     </Link>
-                    <Link passHref={true} href={dataStore.settings.tiktok}>
+                    <Link passHref={true} href={dataStore.settings.tiktok || '#'}>
                         <Image
                             src="/images/tiktok.svg"
                             width={25}
@@ -30,7 +30,7 @@ const Footer = () => {
                             alt="TikTok"
                         />
                     </Link>
-                    <Link passHref={true} href={dataStore.settings.youtube}>
+                    <Link passHref={true} href={dataStore.settings.youtube || '#'}>
                         <Image
                             src="/images/youtube.svg"
                             width={25}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Image from 'next/image'
 import Link from "next/link";
 import styles from "../styles/header.module.scss"
@@ -10,6 +10,11 @@ import {observer} from "mobx-react-lite";
 const Header = () => {
     const { modalsStore, basketStore } = useRootStore();
     const [isOpenMenu, setIsOpenMenu] = useState(false)
+    const [basketLength, setBasketLength] = useState(0)
+
+    useEffect(() => {
+        setBasketLength(basketStore.items.length)
+    }, [basketStore.items.length]);
 
     return (
         <header className={styles.header}>
@@ -23,7 +28,7 @@ const Header = () => {
             </div>
             <div className={styles.header__right}>
                 <div onClick={() => modalsStore.openModal('basket')} className={styles.basket}>
-                    {basketStore.items.length ? <span className={styles.basket__count}>{basketStore.items.length}</span> : null}
+                    {basketLength ? <span className={styles.basket__count}>{basketLength}</span> : null}
                     <Image
                         src="/images/basket.svg"
                         width={30}
@@ -37,7 +42,7 @@ const Header = () => {
                 <Link href={"/bans"} className={styles.header__item}>Бан-лист</Link>
                 <Link href={"/rules"} className={styles.header__item}>Правила</Link>
                 <div onClick={() => modalsStore.openModal('basket')} className={styles.basket}>
-                    {basketStore.items.length ? <span className={styles.basket__count}>{basketStore.items.length}</span> : null}
+                    {basketLength ? <span className={styles.basket__count}>{basketLength}</span> : null}
                     <Image
                         src="/images/basket.svg"
                         width={30}
