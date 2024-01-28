@@ -48,12 +48,7 @@ const Crafts = () => {
                             {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(i => (
                                 craft.Items.find(item => item.column === i) ? (
                                     <div className={styles.item} onClick={() => handleClick(craft.Items.find(item => item.column === i).Item)}>
-                                        <Image
-                                            src={SERVER_URL + 'uploads/' + craft.Items.find(item => item.column === i).Item.Media.name}
-                                            width={80}
-                                            height={80}
-                                            alt={craft.Items.find(item => item.column === i)?.Item.name}
-                                        />
+                                        <img width={80} height={80} src={SERVER_URL + 'uploads/' + craft.Items.find(item => item.column === i).Item.Media.name} alt={craft.Items.find(item => item.column === i)?.Item.name}/>
                                         <div className={styles.block__count}>{craft.Items.find(item => item.column === i).count}</div>
                                     </div>
                                 ) : <div className={styles.item}></div>
@@ -65,12 +60,7 @@ const Crafts = () => {
                             <span className={styles.block__sep + ' ' + styles.block__sep_4}></span>
                         </div>
                         <div className={styles.block + ' ' + styles.block_result} onClick={() => handleClick(craft.Result)}>
-                            <Image
-                                src={SERVER_URL + 'uploads/' + craft.Result.Media.name}
-                                width={80}
-                                height={80}
-                                alt={craft.Result.name}
-                            />
+                            <img width={80} height={80} src={SERVER_URL + 'uploads/' + craft.Result.Media.name} alt={craft.Result.name}/>
                         </div>
                     </div>
                 ))}
