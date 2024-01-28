@@ -27,7 +27,7 @@ const ProductModal = ({ handleClose, isOpen }) => {
                     <img src={SERVER_URL + 'uploads/' + image_name}width={300} height={300}  alt={name}/>
                 </div>
                 <div className={styles.title}>{name}</div>
-                <div className={styles.text}>{description}</div>
+                <div className={styles.text} dangerouslySetInnerHTML={{ __html: description }}></div>
                 <div className={styles.footer}>
                     <div className={styles.price}>{price}₽</div>
                     <div className={componentStyles.button}>
