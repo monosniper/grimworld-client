@@ -80,7 +80,7 @@ export class BasketStore {
         return axios.post(API_URL + "pay", {
             ...data,
             amount: this.total,
-            products: this.items.map((id) => id)
+            products: this.items.map(({id}) => id)
         })
     }
 }
