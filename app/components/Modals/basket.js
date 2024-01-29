@@ -118,7 +118,7 @@ const BasketModal = ({ handleClose, isOpen }) => {
                 </div>
                 <div className={styles.footer}>
                     <div className={styles.price}>{basketStore.total}₽</div>
-                    <button className={componentStyles.button}>Перейти к оплате</button>
+                    <button onClick={handlePay} className={componentStyles.button}>Перейти к оплате</button>
                 </div>
             </div>
         </Modal>
