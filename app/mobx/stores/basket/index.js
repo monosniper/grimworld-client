@@ -1,5 +1,7 @@
 import {makeAutoObservable} from "mobx";
 import Cookies from 'universal-cookie';
+import $api from "@/api";
+import axios from "axios";
 
 export class BasketStore {
     items = [];
@@ -71,6 +73,14 @@ export class BasketStore {
             }
 
             return item;
+        })
+    }
+
+    goToPay(data) {
+        return axios.post("pay", {
+            ...data,
+            amount: this.total,
+            products: this.items.map((id) => id)
         })
     }
 }

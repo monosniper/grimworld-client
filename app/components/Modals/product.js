@@ -9,8 +9,10 @@ import {useRootStore} from "@/mobx";
 import {API_URL, SERVER_URL} from "@/api";
 
 const ProductModal = ({ handleClose, isOpen }) => {
-    const { modalsStore } = useRootStore();
+    const { modalsStore, basketStore } = useRootStore();
     const {name, description, price_1: price, Media: {name: image_name}} = modalsStore.current_product ?? {Media: {}}
+
+    const handleClick = () => basketStore.addItem(modalsStore.current_product)
 
     return (
         <Modal closeTimeoutMS={500} ariaHideApp={false} isOpen={isOpen}>
@@ -30,7 +32,7 @@ const ProductModal = ({ handleClose, isOpen }) => {
                 <div className={styles.text} dangerouslySetInnerHTML={{ __html: description }}></div>
                 <div className={styles.footer}>
                     <div className={styles.price}>{price}₽</div>
-                    <div className={componentStyles.button}>
+                    <div onClick={handleClick} className={componentStyles.button}>
                         В корзину
                         <Image
                             src="/images/basket_black.svg"

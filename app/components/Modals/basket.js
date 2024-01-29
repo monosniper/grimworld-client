@@ -15,7 +15,8 @@ const BasketModal = ({ handleClose, isOpen }) => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [country, setCountry] = useState('ru')
-    const [isConfirmed, setIsConfirmed] = useState(true)
+    const [isConfirmed, setIsConfirmed] = useState(false)
+    const [error, setError] = useState(null)
 
     const handleChangeUsername = (e) => {
         setUsername(e.target.value)
@@ -23,6 +24,20 @@ const BasketModal = ({ handleClose, isOpen }) => {
 
     const handleChangeEmail = (e) => {
         setEmail(e.target.value)
+    }
+
+    const handlePay = () => {
+        if(!username || !email) {
+            setError('Необходимо заполнить все поля')
+        } else {
+            if(!isConfirmed) {
+                setError('Необходимо согласиться с условиями пользования')
+            } else {
+                basketStore.goToPay({username, email, country}).then(({ data: {data} }) => {
+                    console.log(data)
+                })
+            }
+        }
     }
 
     return (
