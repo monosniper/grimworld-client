@@ -92,6 +92,7 @@ const BasketModal = ({ handleClose, isOpen }) => {
                         </div>
                     ))}
                 </div>
+                {error && <div className={styles.error}>{error}</div>}
                 <div className={styles.form}>
                     <div className={componentStyles.field}>
                         <input type="text" value={username} onChange={handleChangeUsername} placeholder={'Никнейм'} />
