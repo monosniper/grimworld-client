@@ -49,6 +49,7 @@
 
 .field_rub {
   transform: translateX(-20px);
+  width: 0;
 }
 
 .field {
@@ -62,4 +63,13 @@
   display: flex;
   justify-content: center;
 
+}
+
+.btn {
+  background: #a589d1;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  height: 50px;
+  padding: 0 30px;
 }

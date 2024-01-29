@@ -40,12 +40,12 @@ const BasketModal = ({ handleClose, isOpen }) => {
                     {basketStore.items.map(item => (
                         <div key={'basket-'+item.id} className={styles.item}>
                             <div className={styles.item__side}>
-                                {item.type === basketStore.PRODUCT_TYPE ? <Image
+                                {item.type === basketStore.PRODUCT_TYPE ? <img
                                     className={styles.item__image}
                                     src={SERVER_URL + 'uploads/' + item.image_name}
                                     width={100}
                                     height={100}
-                                    alt="Scroll down"
+                                    alt={item.name}
                                 /> : null}
                                 <div className={styles.item__title}>{item.name + (item.type === basketStore.DIAMONDS_TYPE ? '☠️' : '')}</div>
                             </div>

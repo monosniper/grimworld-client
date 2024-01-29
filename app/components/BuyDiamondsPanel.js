@@ -82,7 +82,7 @@ const BuyDiamondsPanel = () => {
                 <span className={styles.field_rub}>₽</span>
             </div>
             <div className={styles.footer + ' mt-8'}>
-                <button className={componentStyles.button}>Купить</button>
+                <button className={componentStyles.button + ' ' + styles.btn}>Купить</button>
             </div>
         </div>
     );

@@ -34,7 +34,13 @@ export class BasketStore {
             this.items.push({
                 id: data.id,
                 name: data.name,
-                price: data.price,
+                price: data.price_1,
+                prices: {
+                    [this.DURATION_1]: data.price_1,
+                    [this.DURATION_2]: data.price_2,
+                    [this.DURATION_3]: data.price_3,
+                    [this.DURATION_FOREVER]: data.price_forever,
+                },
                 type: this.PRODUCT_TYPE,
                 isPrivilege: data.isPrivilege,
                 image_name: data.Media.name,
