@@ -46,7 +46,7 @@ export class BasketStore {
                 image_name: data.Media.name,
                 duration: this.DURATION_1,
             })
-            this.total += parseInt(data.price)
+            this.total += parseInt(data.price_1)
             this.cookies.set('items', JSON.stringify(this.items));
         }
     }
@@ -64,6 +64,7 @@ export class BasketStore {
             if(item.id === id) {
                 item.duration = duration
                 _this.total -= item.price
+                console.log(item.prices, duration)
                 const price = item.prices[item.duration]
                 item.price = price
                 _this.total += price
