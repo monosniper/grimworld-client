@@ -1,8 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Moulpali&family=New+Rocker&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Moulpali&family=New+Rocker&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "modals";
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('../fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('../fonts/Montserrat_Alternates/MontserratAlternates-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moulpali';
+  src: url('../fonts/Moulpali/Moulpali-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Rocker';
+  src: url('../fonts/New_Rocker/NewRocker-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
