@@ -16,7 +16,7 @@ const Page = () => {
                 <div className={componentStyles.title}>Политика конфиденциальности</div>
             </div>
 
-           <div className={styles.text}>{dataStore.settings.policy}</div>
+           <div className={styles.text} dangerouslySetInnerHTML={{__html: dataStore.settings.policy}}></div>
         </div>
     );
 };
