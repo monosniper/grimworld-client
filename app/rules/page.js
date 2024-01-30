@@ -15,7 +15,7 @@ const Page = () => {
                 <div className={componentStyles.title}>Правила</div>
             </div>
 
-            <div className={styles.text} dangerouslySetInnerHTML={{__html: dataStore.settings.rules}}></div>
+            <div style={{minHeight: '80vh'}} className={styles.text} dangerouslySetInnerHTML={{__html: dataStore.settings.rules}}></div>
         </div>
     );
 };
