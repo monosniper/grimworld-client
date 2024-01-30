@@ -24,8 +24,8 @@ const Page = () => {
                     <div className={styles.banner__title}>GrimWorld</div>
                     <div className={styles.banner__description}>{dataStore.settings.description}</div>
                     <div className={styles.banner__items}>
-                        <div className={styles.banner__item}>IP: {dataStore.settings.ip1}</div>
-                        <div className={styles.banner__item}>IP: {dataStore.settings.ip2}</div>
+                        <div className={styles.banner__item}>{dataStore.settings.ip1}</div>
+                        <div className={styles.banner__item}>{dataStore.settings.ip2}</div>
                         <div className={styles.banner__item}>
                             <span className={styles.banner__online}></span>
                             {dataStore.online ? (dataStore.online.online + '/' + dataStore.online.max) : '0/0'}
